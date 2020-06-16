@@ -4,6 +4,10 @@
 
 // Hint: consider using .filter(), .indexOf() and .lastIndexOf()
 
-function filterNonUnique(array) {}
+function filterNonUnique(array) {
+    return array.filter(function(nums, index) {
+        return array.indexOf(nums) === index;
+    });
+}
 
 console.log(filterNonUnique([1, 2, 3, 3, 4, 5, 6, 7, 7, 8]));
